@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шпаргалка по JS за конспектом GoIT</title>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Шпаргалка по JS за конспектом GoIT</h1>
+  <h2>Модуль 1 - Заняття 1 - Змінні та типи</h2>
+
+    <p><span class="appellation">Number</span> - цілі числа і числа з плаваючою комою (крапкою). <span class="example">Приклад<span class="descr">const age = 20;
+      const points = 15.8;</span></span></p>
+    <p><span class="appellation">String</span> - рядки, послідовність з нуля або більше символів. <span class="example">Приклад<span class="descr">const username = "Mango";
+      const description = "JavaSript для початківців";</span></span></p>
+    <p><span class="appellation">Boolean</span> - логічний тип даних, прапорці стану. Всього два значення: true і false. <span class="example">Приклад<span class="descr">const isLoggedIn = true;
+      const canMerge = false;
+      const hasChildren = true;
+      const isModalOpen = false;</span></span></p>
+    <p><span class="appellation">null</span> - особливе значення, яке по суті означає ніщо. <span class="example">Приклад<span class="descr">let selectedProduct = null;</span></span></p>
+    <p><span class="appellation">undefined</span> - ще одне спеціальне значення за замовчуванням, коли змінна оголошується, але не ініціалізується, її значення не визначено, їй присвоюється undefined. <span class="example">Приклад<span class="descr">let username;
+      console.log(username); // undefined</span></span></p>
+    <p><span class="appellation">typeof</span> - використовується для отримання типу значення змінної. Повертає на місце свого виклику тип значення змінної. <span class="example">Приклад<span class="descr">let username;
+      console.log(typeof username); // "undefined"
+      
+      let inputValue = null;
+      console.log(typeof inputValue); // "object"
+      
+      const quantity = 17;
+      console.log(typeof quantity); // "number"
+      
+      const message = "JavaScript is awesome!";
+      console.log(typeof message); // "string"
+      
+      const isSidebarOpen = false;
+      console.log(typeof isSidebarOpen); // "boolean"</span></span></p>
+    <p><span class="appellation">NaN</span> - значенням, що становить не число (Not-A-Number). <span class="example">Приклад<span class="descr">console.log(Number(valueB)); // NaN</span></span></p>
+    <p><span class="appellation">Number(val)</span> - приведення до числа, передаючи їй у val те, що потрібно привести до числа. <span class="example">Приклад<span class="descr">const valueA = "5";
+      console.log(Number(valueA)); // 5
+      console.log(typeof Number(valueA)); // "number"
+      
+      const valueB = "random string";
+      console.log(Number(valueB)); // NaN
+      console.log(typeof Number(valueB)); // "number"</span></span></p>
+    <p><span class="appellation">.isNaN(val)</span> - перевіряє, чи вказане значення є NaN, true - якщо значення val - NaN, false - якщо значення val - не NaN. <span class="example">Приклад<span class="descr">const validNumber = Number("51"); // 51
+      console.log(Number.isNaN(validNumber)); // false
+      
+      const invalidNumber = Number("qweqwe"); // NaN
+      console.log(Number.isNaN(invalidNumber)); // true</span></span></p>
+    <p><span class="appellation">.parseInt()</span> - парсить з рядка ціле число. <span class="example">Приклад<span class="descr">console.log(Number.parseInt("5px")); // 5
+      console.log(Number.parseInt("12qwe74")); // 12
+      console.log(Number.parseInt("12.46qwe79")); // 12
+      console.log(Number.parseInt("qweqwe")); // NaN</span></span></p>
+    <p><span class="appellation">.parseFloat()</span> - парсить з рядка дробове число. <span class="example">Приклад<span class="descr">console.log(Number.parseFloat("5px")); // 5
+      console.log(Number.parseFloat("12qwe74")); // 12
+      console.log(Number.parseFloat("12.46qwe79")); // 12.46
+      console.log(Number.parseFloat("qweqwe")); // NaN</span></span></p>
+    <p><span class="appellation">toFixed()</span> - спосіб додати, а результат скоротити до певного знаку після коми. <span class="example">Приклад<span class="descr">console.log(0.17 + 0.24); // 0.41000000000000003
+      console.log((0.17 + 0.24).toFixed(2)); // 0.41</span></span></p>
+    <p><span class="appellation">Math</span> - один із вбудованих класів, який надає набір методів для роботи з числами. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">Math.floor(num)</span> - повертає найбільше ціле число, менше, або яке дорівнює зазначеному числу. <span class="example">Приклад<span class="descr">console.log(Math.floor(1.7)); // 1
+    </span></span></p>
+    <p><span class="appellation">Math.ceil(num)</span> - повертає найменше ціле число, більше, або яке дорівнює зазначеному числу. <span class="example">Приклад<span class="descr">console.log(Math.ceil(1.2)); // 2
+    </span></span></p>
+    <p><span class="appellation">Math.round(num)</span> - повертає значення числа, округленого до найближчого цілого. <span class="example">Приклад<span class="descr">console.log(Math.round(1.2)); // 1
+      console.log(Math.round(1.5)); // 2</span></span></p>
+    <p><span class="appellation">Math.max(num1, num2, ...)</span> - повертає найбільше ціле число з набору <span class="example">Приклад<span class="descr">console.log(Math.max(20, 10, 50, 40)); // 50
+    </span></span></p>
+    <p><span class="appellation">Math.min(num1, num2, ...)</span> - повертає найменше ціле число з набору. <span class="example">Приклад<span class="descr">console.log(Math.min(20, 10, 50, 40)); // 10
+    </span></span></p>
+    <p><span class="appellation">Math.pow(base, exponent)</span> - піднесення до степеня. <span class="example">Приклад<span class="descr">console.log(Math.pow(2, 4)); // 16
+    </span></span></p>
+    <p><span class="appellation">Math.random()</span> - повертає псевдовипадкове число в діапазоні [0, 1). <span class="example">Приклад<span class="descr">console.log(Math.random()); // випадкове число між 0 і 1
+      console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+      
+      </span></span></p>
+    <p><span class="appellation">${вираз}</span> - шаблонний рядок. <span class="example">Приклад<span class="descr">// Використовуючи змінні, необхідно скласти рядок з підставленими значеннями
+      const guestName = "Манго";
+      const roomNumber = 207;
+      const greeting =
+        "Welcome " + guestName + ", your room number is " + roomNumber + "!";
+      console.log(greeting); // "Welcome Mango, your room number is 207!"</span></span></p>
+    <p><span class="appellation">.length</span> - відображає довжину рядка, тобто кількість його символів. <span class="example">Приклад<span class="descr">const message = "Welcome to Bahamas!";
+      console.log(message.length); // 19
+      console.log("There is nothing impossible to him who will try".length); // 47</span></span></p>
+    <p><span class="appellation">.toLowerCase()</span> і <span>.toUpperCase()</span> - повертають новий рядок у відповідному регістрі, не змінюючи оригінальний рядок. <span class="example">Приклад<span class="descr">const message = "Welcome to Bahamas!";
+      console.log(message.toLowerCase()); // "welcome to bahamas!"
+      console.log(message.toUpperCase()); // "WELCOME TO BAHAMAS!"
+      console.log(message); // "Welcome to Bahamas!"</span></span></p>
+    <p><span class="appellation">.indexOf()</span> - повертає позицію (індекс), на якій знаходиться перший збіг підрядка або -1, якщо нічого не знайдено. <span class="example">Приклад<span class="descr">const message = "Welcome to Bahamas!";
+      console.log(message.indexOf("to")); // 8
+      console.log(message.indexOf("hello")); // -1</span></span></p>
+    <p><span class="appellation">.includes()</span> - перевіряє, чи міститься підрядок в рядку, повертає буль - true, якщо міститься, і false - в іншому випадку. <span class="example">Приклад<span class="descr">const productName = "Ремонтний дроїд";
+
+      console.log(productName.includes("н")); // true
+      console.log(productName.includes("Н")); // false
+      console.log(productName.includes("дроїд")); // true
+      console.log(productName.includes("Дроїд")); // false
+      console.log(productName.includes("Ремонтний")); // true
+      console.log(productName.includes("ремонтний")); // false</span></span></p>
+    <p><span class="appellation">.endsWith()</span> - дозволяє визначити, чи завершується рядок символами (підрядком), зазначеними в дужках, повертаючи true або false. <span class="example">Приклад<span class="descr">const jsFileName = "script.js";
+      console.log(jsFileName.endsWith(".js")); // true
+      
+      const cssFileName = "styles.css";
+      console.log(cssFileName.endsWith(".js")); // false</span></span></p>
+    <p><span class="appellation">.replace()</span> і <span>.replaceAll()</span> - повертає новий рядок, в якому перше (replace) або усі збіги (replaceAll) підрядка замінені на вказане значення. <span class="example">Приклад<span class="descr">const jsFileName = "script.js";
+      const minifiedJsFileName = jsFileName.replace(".js", ".min.js");
+      console.log(minifiedJsFileName); // "script.min.js"
+      
+      const cssFileNames = "styles.css, about.css, portfolio.css";
+      const minifiedCssFileNames = cssFileNames.replaceAll(".css", ".min.css");
+      console.log(minifiedCssFileNames); // "styles.min.css, about.min.css, portfolio.min.css"</span></span></p>
+    <p><span class="appellation">.slice()</span> - метод рядків slice (startIndex, endIndex) використовується для створення копії. Він робить копію від startIndex і до, але не включно endIndex і повертає новий рядок, не змінюючи оригінал. <span class="example">Приклад<span class="descr">const productName = "Repair droid";
+      console.log(productName.slice(0, 4)); // "Repa"
+      console.log(productName.slice(3, 9)); // "air dr"
+      console.log(productName.slice(0, productName.length)); // "Repair droid"
+      console.log(productName.slice(7, productName.length)); // "droid"</span></span></p>
+    <p><span class="appellation">&&</span> - логічне «І», приводить всі операнди до буля і повертає значення одного з них. <span class="example">Приклад<span class="descr">console.log(1 && 5); // true && true -> 5
+      console.log(5 && 1); // true && true -> 1
+      console.log(0 && 2); // false && true -> 0
+      console.log(2 && 0); // true && false -> 0
+      console.log("" && "Mango"); // false && true -> ""
+      console.log("Mango" && ""); // true && false -> ""
+      console.log("Mango" && "Poly"); // true && true -> "Poly"
+      console.log("Poly" && "Mango"); // true && true -> "Mango"</span></span></p>
+    <p><span class="appellation">||</span> - логічне «АБО», приводить всі операнди до буля і повертає значення одного з них. <span class="example">Приклад<span class="descr">console.log(true || false); // true
+      console.log(false || true); // true
+      console.log(true || true); // true
+      
+      console.log(3 || false); // 3
+      console.log(false || 3); // 3
+      console.log(3 || true); // 3
+      console.log(true || 3); // true</span></span></p>
+    <p><span class="appellation">!вираз</span> - логічне «НЕ», оператор ! приводить операнд до буля, якщо необхідно, а потім робить інверсію - змінює його на протилежний true -> false або false -> true. <span class="example">Приклад<span class="descr">console.log(!true); // false
+      console.log(!false); // true
+      console.log(!3); // !3 -> !true -> false
+      console.log(!"Mango"); // !"Mango" -> !true -> false
+      console.log(!0); // !0 -> !false -> true
+      console.log(!""); // !"" -> !false -> true
+      
+      const isOnline = true;
+      const isNotOnline = !isOnline; // !isOnline -> !true -> false</span></span></p>
+    
+    <h2> Модуль 1 - Заняття 2 - Розгалуження та цикли</h2>
+    <p><span class="appellation">if</span> - «ЯКЩО», виконує інструкцію, якщо зазначена умова виконується (істинно). Якщо умова не виконується (хибно), може бути виконана інша інструкція. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">if...else</span> - «ЯКЩО»...ІНШЕ», розширює синтаксис if таким чином, що якщо умова приводиться до false, виконається код у фігурних дужках після оператора else. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">else...if</span> - «ІНШЕ»...«ЯКЩО», дозволяє додати після else ще один оператор if з умовою. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation"><умова> ? <вираз_якщо_умова_правдива> : <вираз_якщо_умова_хибна></span> - ьернарний оператор використовується у якості синтаксично коротшої заміни інструкції if...else. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">switch</span> - інструкція розгалуження,  «плоскіший» синтаксис if...else.  <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">while</span> - цикл з передумовою — цикл, який виконується, доки правдива якась умова, зазначена до його початку. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">do...while</span> - цикл з постумовою - цикл, в якому умова перевіряється після виконання тіла циклу. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">for</span> - цикл з лічильником - цикл, в якому певна змінна змінює своє значення із заданого початкового до кінцевого значення з деяким кроком. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">break</span> - повністю припиняє виконання циклу і передає управління на рядок після його тіла. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">continue</span> - виконання тіла припиняється і управління передається до наступної ітерації. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    
+    <h2>Модуль 2 - Заняття 3 - Масиви</h2>
+    <p><span class="appellation">[]</span> - літерал масиву, кожен елемент масиву розділяється комою. Масив - структура даних для зберігання і маніпулювання колекцією індексованих значень. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.split()</span> - перетворює рядок в масив, «розбиваючи» його роздільником. Якщо роздільник - це порожній рядок, то створиться масив окремих символів. Роздільником може бути один або декілька символів. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.join()</span> - об'єднує елементи масиву у рядок. У рядку елементи будуть розділені символом або групою символів. Тобто ця операція протилежна методу рядків .split(). <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.indexOf()</span> - повертає перший індекс, в якому елемент зі значенням value був знайдений в масиві, або число -1, якщо такий елемент відсутній. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.includes()</span> - перевіряє, чи містить масив елемент зі значенням value і повертає true або false відповідно. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.push()</span> - додає один або декілька елементів наприкінці масиву, без необхідності зазначати індекси елементів, що додаються. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.pop()</span> - видаляє останній елемент з кінця масиву і повертає видалений елемент. Якщо масив порожній, метод повертає undefined. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.slice(begin, end)</span> - повертає новий масив, що містить копію частини вихідного масиву, не змінюючи його. Копія створюється з begin і до, але не включно, end - індекси елементів вихідного масиву. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.splice(position, num, sum)</span> - видаляє, додає і замінює елементи у довільному місці масиву. position - вказує на позицію (індекс) першого елемента для видалення, num - визначає кількість елементів, що видаляються, sum - вказує початкову позицію в масиві, куди будуть вставлені нові елементи. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">.concat()</span> - об'єднує два або більше масивів в один. Він не змінює масив, на якому викликається, а повертає новий. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    
+    <h2>Модуль 2 - Заняття 4 - Функції</h2>
+    <p><span class="appellation">function назва() {}</span> - це підпрограма, незалежна частина коду, призначена для багаторазового виконання конкретної задачі з різними початковими значеннями. назва() - виклики функції назва. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">return</span> - використовується для передачі значення з тіла функції у зовнішній код, він відразу ж виходить з функції (припиняє її виконання), і повертає вказане значення у те місце коду, де була викликана функція. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">arguments</span> - можна отримати доступ до списку всіх аргументів, яка доступна тільки всередині функції і зберігає всі аргументи у якості псевдомасиву. <span class="example">Приклад<span class="descr">текст</span></span></p>
+    <p><span class="appellation">Array.from()</span> - метод який створить масив із псевдомасиву. Array.from(arguments). <span class="example">Приклад<span class="descr">текст</span></span></p>
+
+</body>
+</html>
